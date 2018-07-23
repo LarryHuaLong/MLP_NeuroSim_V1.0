@@ -62,7 +62,7 @@ double Array::ReadCell(int x, int y) {
 				//printf("iter: %d, %f\t%f\n", iter, v1, v2);
 				v3 = (v1 + v2)/2;
 				wireCurrent = (readVoltage - v3)/totalWireResistance;
-				cellCurrent = static_cast<AnalogNVM*>(cell[x][y])->Read(v3);
+				cellCurrent = static_cast<AnalogNVM*>(cell[x][y])->Read(v3);//电流值
 				if (wireCurrent > cellCurrent)
 					v1 = v3;
 				else

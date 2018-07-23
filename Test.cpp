@@ -191,9 +191,9 @@ void Validate() {
 								a1Sum += arrayHO->GetMaxCellReadCurrent(j,k);
 								sumArrayReadEnergyHO += arrayHO->wireCapRow * readVoltageHO * readVoltageHO;   // Selected BLs (1T1R) or Selected WLs (cross-point)
 							}
-							IsumMax += arrayHO->GetMaxCellReadCurrent(j,k);
+							IsumMax += arrayHO->GetMaxCellReadCurrent(j,k);//电流叠加
 						}
-						sumArrayReadEnergyHO += Isum * readVoltageHO * readPulseWidthHO;
+						sumArrayReadEnergyHO += Isum * readVoltageHO * readPulseWidthHO;	//Q=I*U*t
 						int outputDigits = 2 * CurrentToDigits(Isum, IsumMax) - CurrentToDigits(a1Sum, IsumMax);
 						outN2[j] += DigitsToAlgorithm(outputDigits, pSumMaxAlgorithm);
 					} else {    // SRAM or digital eNVM
@@ -201,12 +201,12 @@ void Validate() {
 					}
 				}
 				a2[j] = sigmoid(outN2[j]);
-				if (a2[j] > tempMax) {
+				if (a2[j] > tempMax) {//找到最大值
 					tempMax = a2[j];
 					countNum = j;
 				}
 			}
-
+			//电路成本模拟
 			numBatchReadSynapse = (int)ceil((double)param->nOutput/param->numColMuxed);
 			#pragma omp critical    // Use critical here since NeuroSim class functions may update its member variables
 			for (int j=0; j<param->nOutput; j+=numBatchReadSynapse) {
