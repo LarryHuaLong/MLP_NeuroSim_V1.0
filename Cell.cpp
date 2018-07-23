@@ -121,10 +121,10 @@ IdealDevice::IdealDevice(int x, int y) {
 	writePulseWidthLTP = 10e-9;	// Write pulse width (s) for LTP or weight increase
 	writePulseWidthLTD = 10e-9;	// Write pulse width (s) for LTD or weight decrease
 	writeEnergy = 0;	// Dynamic variable for calculation of write energy (J)
-	maxNumLevelLTP = 63;	// Maximum number of conductance states during LTP or weight increase
-	maxNumLevelLTD = 63;	// Maximum number of conductance states during LTD or weight decrease
+	maxNumLevelLTP = 7;	// Maximum number of conductance states during LTP or weight increase
+	maxNumLevelLTD = 7;	// Maximum number of conductance states during LTD or weight decrease
 	numPulse = 0;	// Number of write pulses used in the most recent write operation (dynamic variable)
-	cmosAccess = true;	// True: Pseudo-crossbar (1T1R), false: cross-point
+	cmosAccess = false;	// True: Pseudo-crossbar (1T1R), false: cross-point
 	FeFET = false;      // True: FeFET structure (Pseudo-crossbar only, should be cmosAccess=1)
 	resistanceAccess = 15e3;	// The resistance of transistor (Ohm) in Pseudo-crossbar array when turned ON
 	nonlinearIV = false;	// Consider I-V nonlinearity or not (Currently for cross-point array only)

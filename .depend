@@ -50,9 +50,6 @@ Test.o: Test.cpp formula.h Param.h Array.h Cell.h Mapping.h NeuroSim.h \
  NeuroSim/DFF.h
 formula.o: NeuroSim/formula.cpp NeuroSim/constant.h NeuroSim/formula.h \
  NeuroSim/Technology.h NeuroSim/typedef.h
-Mux.o: NeuroSim/Mux.cpp NeuroSim/constant.h NeuroSim/formula.h \
- NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/Mux.h \
- NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
 FunctionUnit.o: NeuroSim/FunctionUnit.cpp NeuroSim/FunctionUnit.h
 SubArray.o: NeuroSim/SubArray.cpp NeuroSim/constant.h NeuroSim/formula.h \
  NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/SubArray.h \
@@ -66,14 +63,13 @@ SwitchMatrix.o: NeuroSim/SwitchMatrix.cpp NeuroSim/constant.h \
  NeuroSim/FunctionUnit.h NeuroSim/DFF.h
 Technology.o: NeuroSim/Technology.cpp NeuroSim/Technology.h \
  NeuroSim/typedef.h
+Mux.o: NeuroSim/Mux.cpp NeuroSim/constant.h NeuroSim/formula.h \
+ NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/Mux.h \
+ NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
 RowDecoder.o: NeuroSim/RowDecoder.cpp NeuroSim/constant.h \
  NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h \
  NeuroSim/RowDecoder.h NeuroSim/InputParameter.h NeuroSim/MemCell.h \
  NeuroSim/FunctionUnit.h
-ShiftAdd.o: NeuroSim/ShiftAdd.cpp NeuroSim/constant.h NeuroSim/formula.h \
- NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/ShiftAdd.h \
- NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h \
- NeuroSim/Adder.h NeuroSim/DFF.h
 DFF.o: NeuroSim/DFF.cpp NeuroSim/constant.h NeuroSim/formula.h \
  NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/DFF.h \
  NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
@@ -88,3 +84,7 @@ ReadCircuit.o: NeuroSim/ReadCircuit.cpp NeuroSim/constant.h \
  NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h \
  NeuroSim/ReadCircuit.h NeuroSim/InputParameter.h NeuroSim/MemCell.h \
  NeuroSim/FunctionUnit.h
+ShiftAdd.o: NeuroSim/ShiftAdd.cpp NeuroSim/constant.h NeuroSim/formula.h \
+ NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/ShiftAdd.h \
+ NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h \
+ NeuroSim/Adder.h NeuroSim/DFF.h
